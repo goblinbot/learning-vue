@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Intro</title>
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="default.css">
+
+</head>
+<body>
+
+
+<div id="app">
+    <p>{{ message }}</p>
+</div>
+
+<div id="app-2" style="border:1px solid #222;">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds to see my dynamically bound title!
+    </span>
+</div>
+
+<div id="app-3">
+    <transition name="fade">
+        <span v-if="seen">Now you see me</span>
+    </transition>
+    <br/>
+    <transition name="fade">
+        <button v-if="seen" v-on:click="seen = !seen">Now you don't</button>
+    </transition>
+</div>
+
+<div id="app-4">
+    <ol>
+        <li v-for="todo of todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+<div>
+    <button onclick="AddNewToList()">Push 'new item' to list above</button>
+</div>
+
+
+
+<script src="includes/functions.js"></script>
+</body>
+</html>

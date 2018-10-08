@@ -1,0 +1,28 @@
+/* Make markup hurt my eyes a little less */
+body > div {
+    padding: 10px;
+    margin: 5px 15px;
+    width: auto;
+
+}
+body > div > button {
+    margin: 10px 0 0 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid darkblue;
+    background: blue;
+    color: #FFF;
+    cursor: pointer;
+}
+body > div > button:hover {
+    background: darkblue;
+}
+
+
+/* FADE DEFAULT */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
